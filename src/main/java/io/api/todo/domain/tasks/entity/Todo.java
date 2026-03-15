@@ -1,4 +1,4 @@
-package io.api.todo.domain.todo.entity;
+package io.api.todo.domain.tasks.entity;
 
 import java.time.LocalDateTime;
 
