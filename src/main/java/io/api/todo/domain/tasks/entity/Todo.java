@@ -2,6 +2,7 @@ package io.api.todo.domain.tasks.entity;
 
 import java.time.LocalDateTime;
 
+import io.api.todo.domain.identity.entity.BaseModel;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,14 +13,11 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Todo {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Todo extends BaseModel{
+   
 
     private String title;
     private String description;
-    private LocalDateTime createdAt;
     private boolean completed;
 
 }
