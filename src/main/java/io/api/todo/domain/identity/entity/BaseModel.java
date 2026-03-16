@@ -1,6 +1,7 @@
 package io.api.todo.domain.identity.entity;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,7 +16,7 @@ import lombok.Setter;
 public class BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    private UUID id;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private LocalDateTime loggedAt;

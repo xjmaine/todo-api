@@ -1,6 +1,7 @@
 package io.api.todo.domain.tasks.service;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
@@ -19,11 +20,11 @@ public class TodoService {
         return todoRepository.save(todo);
     }
 
-    public Todo getTodo(Long id) {
+    public Todo getTodo(UUID id) {
         return todoRepository.findById(id).orElse(null);
     }
 
-    public Todo updateTodo(Long id, Todo todo) {
+    public Todo updateTodo(UUID id, Todo todo) {
         Todo existingTodo = todoRepository.findById(id).orElse(null);
         if (existingTodo != null) {
             existingTodo.setTitle(todo.getTitle());
@@ -34,7 +35,7 @@ public class TodoService {
         return null;
     }
 
-    public void deleteTodo(Long id) {
+    public void deleteTodo(UUID id) {
         todoRepository.deleteById(id);
     }
 

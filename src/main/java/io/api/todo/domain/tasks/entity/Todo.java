@@ -17,7 +17,7 @@ public class Todo extends BaseModel{
    
 
     private String title;
-    private String description;
+    private String description; 
     private boolean completed;
 
     public Todo() {
@@ -47,7 +47,4 @@ public class Todo extends BaseModel{
     public void setCompleted(boolean completed) {
         this.completed = completed;
     }
-
-
-    
 }
