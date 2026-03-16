@@ -38,6 +38,11 @@ public class DataSeeder {
             user.setActive(true);
             user.setDeleted(false);
             userRepository.save(user);
+
+            //log scess, email and password
+            System.out.println("Super admin created successfully");
+            System.out.println("Email: " + user.getEmail());
+            System.out.println("Password: " + user.getPassword() + " :or: "+ "BlueSkies@2026!");
         }
     }
     
